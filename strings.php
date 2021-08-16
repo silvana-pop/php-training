@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <body>
         <h1>PART 1</h1>
 
@@ -107,7 +107,38 @@ for ($i = 0; $i < strlen($string8); $i++) {
 ?>
         <h1>PART 2</h1>
 <?php
-    
+// 1
+$color = array('white', 'green', 'red', 'blue', 'black');
+echo "The memory of that scene for me is like a frame of film forever frozen at that moment: the ", $color[2] ," carpet,
+the ", $color[1], " lawn, the ", $color[0], " house, the leaden sky. The new president and his first lady. - Richard M.
+Nixon<br><br>";
+
+// 2
+$color = array('white', 'green', 'red');
+echo implode(', ', $color);
+sort($color);
+for($i = 0; $i < count($color); $i++) {
+    echo "<br>";
+    echo $color[$i];
+}
+
+// 3
+$ceu = array( "Italy"=>"Rome", "Luxembourg"=>"Luxembourg", "Belgium"=> "Brussels",
+    "Denmark"=>"Copenhagen", "Finland"=>"Helsinki", "France" => "Paris", "Slovakia"=>"Bratislava",
+    "Slovenia"=>"Ljubljana", "Germany" => "Berlin", "Greece" => "Athens", "Ireland"=>"Dublin",
+    "Netherlands"=>"Amsterdam", "Portugal"=>"Lisbon", "Spain"=>"Madrid", "Sweden"=>"Stockholm",
+    "United Kingdom"=>"London", "Cyprus"=>"Nicosia", "Lithuania"=>"Vilnius", "Czech
+    Republic"=>"Prague", "Estonia"=>"Tallin", "Hungary"=>"Budapest", "Latvia"=>"Riga",
+    "Malta"=>"Valetta", "Austria" => "Vienna", "Poland"=>"Warsaw");
+
+echo "<br>";
+ksort($ceu);
+foreach ($ceu as $country => $capital)
+    echo "<br>The capital of $country is $capital.";
+
+// 4
+$x = array(1, 2, 3, 4, 5);
+
 
 ?>
     </body>
