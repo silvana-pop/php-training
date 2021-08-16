@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>PART 1</h1>
+
 <?php
 // 1
 echo "1. Write a PHP script to: ";
@@ -99,11 +104,11 @@ for ($i = 0; $i < strlen($string8); $i++) {
     }
 }
 
-// 12
-echo "<br><br>12. Write a PHP script to get the filename component of the following path.<br>Sample path : 'http://www.w3resource.com/index.php'<br>Expected Output : 'index'<br>";
-
-$string10 = 'http://www.w3resource.com/index.php';
-$arr4 = preg_split('//', $string10);
-
-print_r($arr4);
 ?>
+        <h1>PART 2</h1>
+<?php
+    
+
+?>
+    </body>
+</html>
