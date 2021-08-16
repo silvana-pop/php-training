@@ -103,6 +103,75 @@ for ($i = 0; $i < strlen($string8); $i++) {
         break;
     }
 }
+// 12
+$string10 = 'http://www.w3resource.com/index.php';
+
+
+// 13
+$var = 'a';
+if ($var == 'z')
+    echo '<br><br>13. a';
+else
+    echo '<br><br>13. ', chr(ord($var)+1);
+
+// 14
+echo '<br><br>14. ', substr($string6, strpos($string6, '@')+1);
+
+// 15
+echo '<br><br>15. ', bin2hex($string6);
+
+// 16
+$string11 = 'The brown fox';
+echo '<br><br>16. ', substr_replace($string11, 'quick ', strpos($string11, 'brown'), 0);
+
+// 17
+$string12 = 'The quick brown fox';
+$arr4 = explode(' ',trim($string12));
+
+echo '<br><br>17. ', $arr4[0];
+
+// 18
+$string13 = '000547023.24';
+echo '<br><br>18. ', ltrim($string13, '0');
+
+// 19
+$string14 = 'The quick brown fox jumps over the lazy dog';
+
+echo '<br><br>19. ', str_replace("fox", "", $string14);
+
+// 20
+$string15 = 'The quick brown fox jumps over the lazy dog///';
+echo '<br><br>20. ', rtrim($string15, '/');
+
+// 21
+$string16 = 'http://www.example.com/5478631';
+$arr5 = explode('/', $string16);
+echo '<br><br>21. ', $arr5[count($arr5) - 1];
+
+// 22
+$string17 = '\"\1+2/3*2:2-3/4*3';
+echo '<br><br>22. ', str_replace(array('+', '-', '*', '/', '"', ':', "\\"), " ", $string17);
+
+// 23
+echo '<br><br>23. ';
+$arr6 = explode(' ', $string14);
+for($i = 0; $i < 5; $i++)
+    echo $arr6[$i], " ";
+
+
+// 24
+$string18 = '2,543.12';
+echo '<br><br>24. ', str_replace(',', "", $string18);
+
+// 25
+echo '<br><br>25. ';
+for ($i = ord('a'); $i < ord('z'); $i++) {
+    echo chr($i);
+}
+
+// 26
+$d = 'A00';
+echo '<br><br>26. ',++$d;
 
 ?>
         <h1>PART 2</h1>
@@ -138,7 +207,10 @@ foreach ($ceu as $country => $capital)
 
 // 4
 $x = array(1, 2, 3, 4, 5);
-
+unset($x[3]);
+sort($x, SORT_NUMERIC);
+echo '<br><br>';
+print_r($x);
 
 ?>
     </body>
