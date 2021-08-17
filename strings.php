@@ -235,8 +235,100 @@ echo '<br><br>7. ';
 array_splice($arr9, 3, 0, '$');
 print_r($arr9);
 
-// 10
+// 11
+$array1 = array(array(77, 87), array(23, 45));
+$array2 = array("w3resource", "com");
+echo '<br><br>11. ';
+$sa = array_slice($array1, 0, 2);
+array_splice($sa[0], 0, 0, $array2[0]);
+array_splice($sa[1], 0, 0, $array2[1]);
+print_r($sa);
 
+// 12
+$Color = array('A' => 'Blue', 'B' => 'Green', 'c' => 'Red');
+echo '<br><br>12. ';
+foreach ($Color as &$var)
+    $var = strtolower($var);
+print_r($Color);
+foreach ($Color as &$var)
+    $var = strtoupper($var);
+print_r($Color);
+
+// 15
+$rng = range(11,20);
+shuffle($rng);
+echo '<br><br>15. ';
+print_r($rng);
+
+// 19
+$color = array ( "color" => array ( "a" => "Red", "b" => "Green", "c" => "White"), "numbers" => array ( 1, 2, 3, 4, 5, 6 ), "holes" => array ( "First", 5 => "Second", "Third"));
+$holes = $color['holes'];
+$color1 = $color['color'];
+echo '<br><br>19. ', $holes[5], " ", $color1['a'];
+
+// 28
+$arr13 = [2,2,4,5,8,8,77,2];
+echo '<br><br>28. ';
+rsort($arr13);
+print_r($arr13);
+
+// 36
+$arr14 = ["hgasdkfa", "JGJjhgjhg", "JHDGSFS"];
+echo '<br><br>36. ';
+foreach ($arr14 as &$var)
+    $var = strtolower($var);
+print_r($arr14);
+foreach ($arr14 as &$var)
+    $var = strtoupper($var);
+print_r($arr14);
+
+// 40
+$arr15 = [1,4,7,33,7767,2,3,3];
+echo '<br><br>40. ';
+sort($arr15);
+print_r($arr15);
+
+// 46
+$arr16 = ['askdjfhaksd', 'asdjkfh4akjsdhf', 'aksdjhfas', 2];
+unset($var);
+foreach($arr16 as $var)
+    if (is_string($var) == false)
+        $strings = false;
+    else $strings = true;
+if ($strings == true) echo '<br><br>46. ALL STRINGS';
+else echo '<br><br>46. NOT STRINGS';
+
+// 48
+$arr17 = [1,3,5,6,8];
+$arr18 = [7,5,2,8,9,10];
+$arr19 = array_merge($arr17, $arr18);
+echo '<br><br>48. ';
+print_r($arr19);
+
+// 49
+$arr20 = ['c1' => 'Red', 'c2' => 'Green', 'c3' => 'White', 'c4' => 'Black'];
+$arr21 = ['c2', 'c4'];
+echo '<br><br>49. ', $arr20[$arr21[0]], " ", $arr20[$arr21[1]];
+
+// 50
+echo '<br><br>50. ';
+foreach ($arr20 as $key => $color)
+    if(in_array($key, $arr21) == false)
+        echo $color, " ";
+
+// 53
+function del3($var) {
+    if ($var == 3)
+        return null;
+    else return $var;
+}
+$arr12 = [1,2,3,4,5,6,7, 3, 4, 3];
+echo '<br><br>53. ';
+print_r(array_filter($arr12, 'del3'));
+
+
+// 59
+echo '<br><br>59. ', gmp_fact(20);
 
 ?>
     </body>
