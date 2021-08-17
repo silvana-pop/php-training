@@ -105,7 +105,8 @@ for ($i = 0; $i < strlen($string8); $i++) {
 }
 // 12
 $string10 = 'http://www.w3resource.com/index.php';
-
+$arr7 = preg_split('/[.\s\/]/', $string10);
+echo '<br><br>12. ', $arr7[count($arr7)-2];
 
 // 13
 $var = 'a';
@@ -178,11 +179,12 @@ echo '<br><br>26. ',++$d;
 <?php
 // 1
 $color = array('white', 'green', 'red', 'blue', 'black');
-echo "The memory of that scene for me is like a frame of film forever frozen at that moment: the ", $color[2] ," carpet,
+echo "1. The memory of that scene for me is like a frame of film forever frozen at that moment: the ", $color[2] ," carpet,
 the ", $color[1], " lawn, the ", $color[0], " house, the leaden sky. The new president and his first lady. - Richard M.
 Nixon<br><br>";
 
 // 2
+echo '2. ';
 $color = array('white', 'green', 'red');
 echo implode(', ', $color);
 sort($color);
@@ -200,7 +202,7 @@ $ceu = array( "Italy"=>"Rome", "Luxembourg"=>"Luxembourg", "Belgium"=> "Brussels
     Republic"=>"Prague", "Estonia"=>"Tallin", "Hungary"=>"Budapest", "Latvia"=>"Riga",
     "Malta"=>"Valetta", "Austria" => "Vienna", "Poland"=>"Warsaw");
 
-echo "<br>";
+echo "<br><br>3. ";
 ksort($ceu);
 foreach ($ceu as $country => $capital)
     echo "<br>The capital of $country is $capital.";
@@ -209,8 +211,32 @@ foreach ($ceu as $country => $capital)
 $x = array(1, 2, 3, 4, 5);
 unset($x[3]);
 sort($x, SORT_NUMERIC);
-echo '<br><br>';
+echo '<br><br>4. ';
 print_r($x);
+
+// 5
+$color = array(4 => 'white', 6 => 'green', 11=> 'red');
+echo '<br><br>5. ', $color[4], '<br><br>';
+
+// 6
+$json = '{"Title":"The Cuckoos Calling","Author":"Robert Galbraith","Detail":{"Publisher":"Little Brown"}}';
+$arr8 = json_decode($json, true);
+echo '6. ';
+foreach ($arr8 as $x => $y) {
+    if (is_string($y))
+        echo '<br>', $x, ' : ', $y;
+    else foreach ($y as $z => $w)
+        echo '<br>', $z, ' : ', $w;
+}
+
+// 7
+$arr9 = [1,2,3,4,5];
+echo '<br><br>7. ';
+array_splice($arr9, 3, 0, '$');
+print_r($arr9);
+
+// 10
+
 
 ?>
     </body>
